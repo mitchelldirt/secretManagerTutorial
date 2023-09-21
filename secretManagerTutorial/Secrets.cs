@@ -11,6 +11,6 @@ public class Secrets
         var clientId = config["ServiceApiKey"];
         
         // clientId could be null since we aren't sure what's in the secret manager. Make sure to check :)
-        return clientId == null ? "" : clientId;
+        return clientId ?? "secret not found :(";
     }
 }
